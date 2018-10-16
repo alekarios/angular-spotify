@@ -1,0 +1,26 @@
+{
+  "name": "angular-disable-backspace-navigation",
+  "description": "Simple angular 1 module to disable navigation via backspace",
+  "main": "index.js",
+  "authors": [
+    "Kevin Gravier <kevin@mrkmg.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "backspace",
+    "navigation",
+    "disable"
+  ],
+  "homepage": "https://github.com/mrkmg/angular-disable-backspace-navigation",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.x"
+  }
+}

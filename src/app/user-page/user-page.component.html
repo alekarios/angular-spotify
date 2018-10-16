@@ -1,0 +1,38 @@
+
+<section id="cover" style="background-color:black">
+        <div id="cover-caption">
+            <div id="container" class="container">
+                <div class="row text-white">
+                    <div class="col-sm-10 offset-sm-1 text-center">
+                        <h1 class="display-3">Welcome {{currentUser}}</h1>
+                        <form (submit)="onArtistSelected(search.value) " class="form-inline justify-content-center">
+                            <mat-form-field class="mat-full-width">
+                                <mat-card>                               
+                                  <input type="text"
+                                    id="inputSearch"
+                                    placeholder="Search"
+                                    aria-label="Number"
+                                    matInput
+                                    [formControl]="search"
+                                    [matAutocomplete]="auto">
+                                </mat-card> 
+                                  <mat-autocomplete #auto="matAutocomplete">
+                                    <mat-option (click)="onArtistSelected(artist)" *ngFor="let artist of artistFilteredOptions | async" >
+                                      <span>{{artist}}</span>
+                                    </mat-option>
+                                  </mat-autocomplete>
+                            </mat-form-field>
+                         </form>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div id="tracks" class="container grid-container" *ngFor="let track of trackByArtist">
+                <div  class="grid-item" *ngFor="let track of trackByArtist">
+                    <p (click)="onClickTrack($event)" id="trackName">{{track.name}}</p>
+                        <img class="zoom"  [src]="track.image">
+                </div>
+            </div>
+    </section>
+    

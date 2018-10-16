@@ -1,0 +1,36 @@
+/* .card{
+    margin-top: 80px;
+    max-width: 400px;    
+}
+.container{
+    position: fixed
+}
+.myFrame{
+    margin-top: 80px;
+}
+.myFrame{
+    border:10px solid grey;
+}
+
+#description {
+    font-family: helvetica;
+    font-size: 14px;
+} */
+/* .container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 50px 50px;
+} */
+.container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px;
+}
+mat-card{
+    background-color: black;
+}
+.myFrame{
+    border: 5px solid blueviolet
+}

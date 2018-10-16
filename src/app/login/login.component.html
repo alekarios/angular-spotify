@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+        <form (submit)="onSubmit(check)" #check="ngForm" >
+            <mat-card>
+            <mat-card-header><h2><strong>Login</strong></h2></mat-card-header>
+                    <mat-form-field>
+                      <textarea matInput
+                       ngModel 
+                       name="usernameInput"
+                       #usernameInput="ngModel"
+                       placeholder="UserName"
+                       required></textarea>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field>
+                      <textarea matInput
+                       ngModel 
+                       name="passwordInput"
+                       #passwordInput="ngModel"
+                       placeholder="Password"
+                       required></textarea>
+                    </mat-form-field><br>
+                    <br>
+                    <p *ngIf="validation" class="cross-validation-error-message alert alert-danger">
+                      <strong>Invalid username or password</strong>
+                      </p>
+                    <button type="submit" mat-raised-button color="primary">Submit</button>
+            </mat-card>
+        </form>
+    </div>
+  </div>
+</div>
+
+
+
