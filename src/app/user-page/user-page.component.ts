@@ -46,7 +46,6 @@ export class UserPageComponent implements OnInit {
           {name: spotifyData.tracks.items[i].name, image: spotifyData.tracks.items[i].album.images[1].url}
            );
       }
-      console.log(this.trackByArtist);
     });
     if (this.check === true) {
       this.trackByArtist = [];
