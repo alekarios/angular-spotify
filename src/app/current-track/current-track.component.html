@@ -1,7 +1,26 @@
-<mat-card>
-    <iframe class="myFrame" width="1000" height="800" [src]="url">
-      </iframe>
-</mat-card>
+<div class="grid-container">
+  <div class="gid-item">
+      <mat-card class="youtube-card">
+          <iframe class="myFrame" width="1000" height="800" [src]="url">
+            </iframe>
+      </mat-card>
+  </div>
+  <div class="grid-item">
+  </div>
+  <div class="grid-item">
+    <mat-card class="info-card">
+      <mat-card-header class="header">
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title><h4>{{artistName}} - {{track}}</h4></mat-card-title>
+      </mat-card-header>
+      <img mat-card-image class="track-image" [src]="trackImage">
+      <h3>Description</h3>
+      <mat-card-content>
+        <h5>Published from {{description1}} in {{description2}}</h5>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
 
 
 

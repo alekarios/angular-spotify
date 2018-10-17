@@ -22,6 +22,12 @@ export class YoutubeService {
     // tslint:disable-next-line:max-line-length
     return this.http.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&maxResults=10&q=${search}&type=video&key=${this.youtubeAPIKey}`);
   }
+
+  getTrackInfo(artist, track): Observable<any> {
+
+    // tslint:disable-next-line:max-line-length
+    return this.http.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${artist}+${track}&key=${this.youtubeAPIKey}`);
+  }
 }
 
 

@@ -22,15 +22,30 @@
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 50px 50px;
 } */
-.container {
-    background-color: white;
+.grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 50px;
+    background-color: black;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    /* grid-template-rows: 50px 50px; */
 }
-mat-card{
+.youtube-card{
     background-color: black;
 }
-.myFrame{
-    border: 5px solid blueviolet
+.info-card{
+    background-color:grey;
+    margin-right: 100px;
+}
+.header{
+    background-color:grey;
+}
+.header-image{
+    background-image: url('https://i.ytimg.com/vi/Pgum6OT_VH8/hqdefault.jpg');
+    background-size: cover;
+}
+img{
+    width: 500px;
+    margin-left: 2px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 3px;
 }
