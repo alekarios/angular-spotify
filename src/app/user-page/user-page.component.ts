@@ -81,6 +81,9 @@ export class UserPageComponent implements OnInit {
         map(value => this._filter(value))
       );
 
+      this._artistService.getNewReleases().subscribe((newReleases) => {
+        (newReleases.albums.items).map();
+      });
   }
 
 

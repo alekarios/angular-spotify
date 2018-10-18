@@ -42,6 +42,7 @@ export class CurrentTrackComponent implements OnInit {
       this.trackImage = data.json().items[0].snippet.thumbnails.high['url'];
       this.description1 = data.json().items[0].snippet.channelTitle;
       this.description2 = (data.json().items[0].snippet.publishedAt).substring(-1, 10);
+      console.log(this.trackImage);
     });
   }
 

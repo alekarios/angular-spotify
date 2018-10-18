@@ -11,7 +11,7 @@ export class ArtistService {
   private api_key = '4e53aea22e9246268b35c73708b470e6';
 
   // tslint:disable-next-line:max-line-length
-  private token = 'BQC1kYbyGw8HKfnDPp9hAztcgLcBjhTWVKu8yzbsAUyQlcIW0MDx60X2wlB_RgXOw9uAfPzt1JoP4FrCJIk4B5M3ctTUwyDQXlJA2L_AqbaQGcC95epz5XKrCi_7NFcOu8x7DyRlaP5AakoclipBGJj5CMYz2RHmAQLlfbxR3d8qwPd7HK4';
+  private token = 'BQArC_rIAYL8mEsz9Cii6XeUEl6SEZqVSX7Lp6uF7RizDj2_k_AkzlhQyNZQjhxeZretKMkCPn-ids6K8iXNOzpV8jz3NOzs_lp02YTqFj1FR1IHX8Fu1qDx_Bwgz6gqLTtrkt0i2T079Bin0Tt8lS9XtLBwiQLtZbivlF7eg5qED7Ynzs0';
 
   private spotifyHeader = new HttpHeaders(
     {'Content-Type': 'application/json',
@@ -25,6 +25,10 @@ export class ArtistService {
   getSpotify(artist): Observable<any> {
 
     return this._http.get<any>(`https://api.spotify.com/v1/search?q=${artist}&type=track%2Cartist`, {headers: this.spotifyHeader});
+  }
+
+  getNewReleases () {
+    return this._http.get<any>('https://api.spotify.com/v1/browse/new-releases', {headers: this.spotifyHeader});
   }
 
 
