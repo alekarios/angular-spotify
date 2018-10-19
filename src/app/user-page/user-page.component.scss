@@ -64,7 +64,7 @@ $animationSpeed: 50s;
 	overflow:hidden;
 	position: relative;
 	width: 960px;
-	margin-top: 250px;
+	margin-top: 160px;
 	border: 2px solid purple;
 	border-radius: 10px;
 	
@@ -95,8 +95,10 @@ $animationSpeed: 50s;
 		width: calc(250px * 14);
 	}
 	.slide-track:hover {
-		animation-play-state: paused
+		animation-play-state: paused;
+		cursor: pointer;
 	}
+	
 	
 	.slide {
 		height: 100px;

@@ -64,6 +64,10 @@ export class UserPageComponent implements OnInit {
     this.route.navigate(['/track/', this.track, this.currentArtist]);
   }
 
+  onSelectedNewRelease(artistId) {
+    alert(artistId);
+  }
+
 
   ngOnInit()   {
 
@@ -87,12 +91,12 @@ export class UserPageComponent implements OnInit {
 
       this._artistService.getNewReleases().subscribe((newReleases) => {
         (newReleases.albums.items).map((el) => {
-          // console.log(el.images[1].url);
           this.newReleases.push(
-            {url: el.images[1].url}
+            {url: el.images[1].url, id: el.id}
           );
         });
       });
+      console.log(this.newReleases);
   }
 
 

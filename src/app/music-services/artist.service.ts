@@ -11,7 +11,7 @@ export class ArtistService {
   private api_key = '4e53aea22e9246268b35c73708b470e6';
 
   // tslint:disable-next-line:max-line-length
-  private token = 'BQAAka5DAc9RpvXZOGUoFQmPXfckoMs-lCaIf_k7iiPY3NhupR_wgFG8pQkt7ED7LS-MhCdOxvL1h9CBxlN7MB0Mrh1G4YXkBzCdPdTaQr72UhoTp0tXBs5AYMGJSy5MbI5lEuC81_OnJvSLziYfUVaqGCcOAGImTyYcOUyT5YghZLs0Wuc';
+  private token = 'BQDcKfJVnoHjra_734j6SUr06qo-g6JYhZkq-08kn5mBdxCfhPjC-JTBNiiI2RVrTtFygMJCn6LLcdCNvQehtLR-eW-JAxzAahrWGbF-PMv5Cjx92j9hDcYWKsMB_i12N7q20XyJwxi-vz1z46j0SXkEkzOt9Yut2zLfJBvwSUOrE56WRcs';
 
   private spotifyHeader = new HttpHeaders(
     {'Content-Type': 'application/json',
