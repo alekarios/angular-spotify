@@ -28,8 +28,8 @@
                 </div>
             </div>
         </div>
-            <div id="tracks" class="container grid-container" *ngFor="let track of trackByArtist">
-                <div  class="grid-item" *ngFor="let track of trackByArtist">
+            <div  id="tracks" class="container grid-container" *ngFor="let track of trackByArtist">
+                <div style="background-image:url(/src/app/jpeg/music.jpg)" class="grid-item" *ngFor="let track of trackByArtist">
                     <p (click)="onClickTrack($event)" id="trackName">{{track.name}}</p>
                         <img class="zoom"  [src]="track.image">
                 </div>
