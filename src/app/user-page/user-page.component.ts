@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { NgForm, FormControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import { ArtistService } from '../music-services/artist.service';
 import { Observable } from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
+import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-user-page',
@@ -30,9 +31,10 @@ export class UserPageComponent implements OnInit {
 
   private newReleases: Array<object> = [];
 
-  private example: string [] = ['1', '2', '3', '4', '5'];
+  private selectedAlbumId: SafeResourceUrl;
 
-  constructor(public activateRouter: ActivatedRoute, private _artistService: ArtistService,  private route: Router) {
+  // tslint:disable-next-line:max-line-length
+  constructor(public activateRouter: ActivatedRoute, private _artistService: ArtistService,  private route: Router, private satinizer: DomSanitizer) {
 
    }
 
@@ -64,8 +66,8 @@ export class UserPageComponent implements OnInit {
     this.route.navigate(['/track/', this.track, this.currentArtist]);
   }
 
-  onSelectedNewRelease(artistId) {
-    alert(artistId);
+  private onSelectedNewRelease(albumId) {
+    this.selectedAlbumId =  this.satinizer.bypassSecurityTrustResourceUrl(`https://open.spotify.com/embed/album/${albumId}`);
   }
 
 
