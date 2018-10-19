@@ -35,4 +35,10 @@
                 </div>
             </div>
     </section>
-<iframe class="playlist" src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="700" height="600" frameborder="20" allowtransparency="true" allow="encrypted-media"></iframe>
+<!-- <iframe class="playlist" src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="700" height="600" frameborder="20" allowtransparency="true" allow="encrypted-media"></iframe> -->
+ <div class="slider">
+        <div class="slide-track">
+            <div class="slide" *ngFor="let item of newReleases">
+                <img [src]="item.url" height="100" width="250" alt="" />
+            </div>
+    </div>  

@@ -28,6 +28,10 @@ export class UserPageComponent implements OnInit {
 
   private currentArtist = '';
 
+  private newReleases: Array<object> = [];
+
+  private example: string [] = ['1', '2', '3', '4', '5'];
+
   constructor(public activateRouter: ActivatedRoute, private _artistService: ArtistService,  private route: Router) {
 
    }
@@ -82,7 +86,12 @@ export class UserPageComponent implements OnInit {
       );
 
       this._artistService.getNewReleases().subscribe((newReleases) => {
-        (newReleases.albums.items).map();
+        (newReleases.albums.items).map((el) => {
+          // console.log(el.images[1].url);
+          this.newReleases.push(
+            {url: el.images[1].url}
+          );
+        });
       });
   }
 
